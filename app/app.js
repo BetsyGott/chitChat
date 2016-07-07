@@ -17,23 +17,25 @@ angular
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
-        url: '/profile',
-        resolve : {
-            auth: function($state, Users, Auth){
-                return Auth.$requireAuth().then(function(auth){
-                    return Users.getProfile(auth.uid).$loaded();
-                });
-            },
-              profile: function(Users, Auth){
-                  return Auth.$requireAuth().then(function(auth){
-                      return Users.getProfile(auth.uid).$loaded();
-                  });
-              }
-        }
+        url: '/',
+        templateUrl: 'home/home.html'
       })
         .state('profile', {
-            url: '',
-            templateUrl: ''
+            url: '/profile',
+            controller: 'ProfileCtrl as profileCtrl',
+            templateUrl: 'users/profile.html',
+            resolve: {
+                auth: function($state, Users, Auth){
+                    return Auth.$requireAuth().catch(function(){
+                        $state.go('home');
+                    });
+                },
+                profile: function(Users, Auth){
+                    return Auth.$requireAuth().then(function(auth){
+                        return Users.getProfile(auth.uid).$loaded();
+                    });
+                }
+            }
         })
       .state('login', {
         url: '/login',
@@ -66,4 +68,4 @@ angular
 
     $urlRouterProvider.otherwise('/');
   })
-  .constant('FirebaseUrl', 'https://chitchat-8cc00.firebaseio.com');
+  .constant('FirebaseUrl', 'https://chitchat-base.firebaseio.com/');
