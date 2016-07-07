@@ -69,6 +69,12 @@ angular
                 }
             }
         })
+        //child state of the channels controller
+        .state('channels.create', {
+            url: '/create',
+            templateUrl: 'channels/create.html',
+            controller: 'ChannelsCtrl as channelsCtrl'
+        })
       .state('login', {
         url: '/login',
         controller: 'AuthCtrl as authCtrl',
