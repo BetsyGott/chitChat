@@ -3,16 +3,55 @@ body {
 }
 
 .page-wrapper {
-  max-width:550px;
-  margin-right: auto;
-  margin-left: auto;
-  padding:15px;
+  background: pink;
+  height: 100vh;
+  width: 100%;
 }
 
 .page-wrapper .logo-img {
   margin-top:-10px;
 }
 
+.header-container {
+  max-width:550px;
+  margin-right: auto;
+  margin-left: auto;
+  padding:15px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 15px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.home-bg {
+  background: #EF629F;
+  background: -webkit-linear-gradient(#EF629F, #EECDA3); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#EF629F, #EECDA3); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#EF629F, #EECDA3); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#EF629F, #EECDA3 );
+}
+
+.register-bg {
+  background: #EF629F;
+  background: -webkit-linear-gradient(#EF629F, #5FC3E4); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#EF629F, #5FC3E4); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#EF629F, #5FC3E4); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#EF629F, #5FC3E4 );
+}
+
+.login-bg {
+  background: #EF629F;
+  background: -webkit-linear-gradient(#EF629F, #ddd6f3); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#EF629F, #ddd6f3); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#EF629F, #ddd6f3); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#EF629F, #ddd6f3 );
+}
+
+.reg-btn {
+  background: #EF629F;
+  color: #fff;
+}
 
 .main {
   position:absolute;
