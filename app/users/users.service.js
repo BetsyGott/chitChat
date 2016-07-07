@@ -9,7 +9,6 @@ angular.module('chitChatApp')
                 return $firebaseObject(usersRef.child(uid));
             },
             getGravatar: function(uid){
-                console.log('//www.gravatar.com/avatar/' + users.$getRecord(uid).emailHash);
                 return '//www.gravatar.com/avatar/' + users.$getRecord(uid).emailHash;
             },
             getDisplayName: function(uid){
