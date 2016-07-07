@@ -10,4 +10,12 @@ angular.module('angularfireSlackApp')
             profileCtrl.profile.$save();
         };
 
+        //go to channels after a successfully updated profile
+        profileCtrl.updateProfile = function(){
+            profileCtrl.profile.emailHash = md5.createHash(auth.password.email);
+            profileCtrl.profile.$save().then(function(){
+                $state.go('channels');
+            });
+        };
+
     });
