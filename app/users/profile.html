@@ -1,18 +1,20 @@
-<div class="page-wrapper">
-
-    <div class="page-header">
-        <h1>Edit Profile</h1>
-    </div>
-
-    <form ng-submit="profileCtrl.updateProfile()">
-        <p ng-hide="profileCtrl.profile.displayName">
-            Pick a display name to chitChat!
-        </p>
-
-        <div class="input-group">
-            <input required type="text" class="form-control" placeholder="Display Name" ng-model="profileCtrl.profile.displayName">
+<div class="page-wrapper home-bg">
+    <div class="header-container">
+        <div class="page-header">
+            <h1>Edit Profile</h1>
         </div>
-        <input type="submit" class="btn btn-default" value="Set Display Name">
-    </form>
 
+        <form ng-submit="profileCtrl.updateProfile()" class="form-inline text-center">
+
+            <p ng-hide="profileCtrl.profile.displayName">
+                Pick a display name to chitChat!
+            </p>
+
+            <div class="input-group">
+                <input required type="text" class="form-control" placeholder="Display Name" ng-model="profileCtrl.profile.displayName">
+            </div>
+
+            <input type="submit" class="btn reg-btn" value="Set Display Name">
+        </form>
+    </div>
 </div>
