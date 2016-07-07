@@ -2,8 +2,8 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>AngularFire Slack</title>
-    <meta name="description" content="">
+    <title>chitChat</title>
+    <meta name="description" content="a chat message app">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
@@ -16,9 +16,6 @@
     <!-- endbuild -->
   </head>
   <body ng-app="angularfireSlackApp">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
 
     <ui-view></ui-view>
 
@@ -48,6 +45,8 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="app.js"></script>
+    <script src="auth/auth.controller.js"></script>
+    <script src="auth/auth.service.js"></script>
     <!-- endbuild -->
 </body>
 </html>
