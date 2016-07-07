@@ -17,9 +17,24 @@ angular
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
-        url: '/',
-        templateUrl: 'home/home.html'
+        url: '/profile',
+        resolve : {
+            auth: function($state, Users, Auth){
+                return Auth.$requireAuth().then(function(auth){
+                    return Users.getProfile(auth.uid).$loaded();
+                });
+            },
+              profile: function(Users, Auth){
+                  return Auth.$requireAuth().then(function(auth){
+                      return Users.getProfile(auth.uid).$loaded();
+                  });
+              }
+        }
       })
+        .state('profile', {
+            url: '',
+            templateUrl: ''
+        })
       .state('login', {
         url: '/login',
         controller: 'AuthCtrl as authCtrl',
@@ -51,4 +66,4 @@ angular
 
     $urlRouterProvider.otherwise('/');
   })
-  .constant('FirebaseUrl', 'https://chitchat-8cc00.firebaseapp.com/');
+  .constant('FirebaseUrl', 'https://chitchat-8cc00.firebaseio.com');
