@@ -3,16 +3,55 @@ body {
 }
 
 .page-wrapper {
-  max-width:550px;
-  margin-right: auto;
-  margin-left: auto;
-  padding:15px;
+  background: pink;
+  height: 100vh;
+  width: 100%;
 }
 
 .page-wrapper .logo-img {
   margin-top:-10px;
 }
 
+.header-container {
+  max-width:550px;
+  margin-right: auto;
+  margin-left: auto;
+  padding:15px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 15px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.home-bg {
+  background: #EF629F;
+  background: -webkit-linear-gradient(#EF629F, #EECDA3); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#EF629F, #EECDA3); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#EF629F, #EECDA3); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#EF629F, #EECDA3 );
+}
+
+.register-bg {
+  background: #EF629F;
+  background: -webkit-linear-gradient(#EF629F, #5FC3E4); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#EF629F, #5FC3E4); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#EF629F, #5FC3E4); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#EF629F, #5FC3E4 );
+}
+
+.login-bg {
+  background: #EF629F;
+  background: -webkit-linear-gradient(#EF629F, #ddd6f3); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#EF629F, #ddd6f3); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#EF629F, #ddd6f3); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#EF629F, #ddd6f3 );
+}
+
+.reg-btn {
+  background: #EF629F;
+  color: #fff;
+}
 
 .main {
   position:absolute;
@@ -27,35 +66,38 @@ body {
   width:19.5%;
   vertical-align: top;
   height:100%;
-  background:#4d394b;
   position:relative;
   overflow-y:scroll;
   padding-bottom:100px;
 }
 
-.sidebar .slack-name {
-  background:#3E313C;
+.sidebar .chat-name {
+  background: rgba(0,0,0,.4);
   padding:15px 0px 15px 15px;
 }
 
-.sidebar .slack-name h2{
+.sidebar .chat-name h2{
   color:#fff;
   font-size:18px;
   font-weight:bold;
-  margin-top:0px;
-  margin-bottom:0px;
+  margin-top:0;
+  margin-bottom:0;
+}
+
+.sidebar .chat-name h2 img{
+  max-width: 25px;
 }
 
 .sidebar .channel-list {
   margin-top:20px;
-  background:#4d394b;
+    background: rgba(0,0,0,.4);
   position:relative;
 }
 
 .sidebar .channel-list .channel a{
   display:block;
   color:rgba(255,255,255,0.6);
-  padding:3px 0px 3px 15px;
+  padding:3px 0 3px 15px;
   width:90%;
   font-weight:300;
 
@@ -94,7 +136,7 @@ body {
   position:fixed;
   bottom:0;
   padding:15px;
-  background:#3E313C;
+  background: rgba(62,49,60,0.8);
   width:19.5%;
 }
 
@@ -149,12 +191,13 @@ body {
   width:80%;
   overflow-y:scroll;
   padding:55px 15px 65px 15px;
+    background: url("../images/gpp.png");
+    margin-left: -4px;
 }
 
 .message-pane .header {
   position:fixed;
   top:0;
-  background:#fff;
   width:100%;
   z-index:2;
 }
