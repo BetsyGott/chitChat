@@ -1,0 +1,40 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>chitChat</title>
+    <meta name="description" content="a chat message app">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body ng-app="chitChatApp">
+
+    <ui-view></ui-view>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+    <!--may need to change angularfire to 1.1.4-->
+    <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+    <!--may need to change angular ui router to 0.2.18-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+    <!--may need to change angular md5 to 0.1.8-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-md5/0.1.10/angular-md5.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="controllers/auth.controller.js"></script>
+    <script src="services/auth.service.js"></script>
+    <script src="services/users.service.js"></script>
+    <script src="controllers/profile.controller.js"></script>
+    <script src="controllers/channels.controller.js"></script>
+    <script src="services/channels.service.js"></script>
+    <script src="services/messages.service.js"></script>
+    <script src="controllers/messages.controller.js"></script>
+
+</body>
+</html>

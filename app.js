@@ -17,7 +17,7 @@ angular
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'home/home.html',
+        templateUrl: 'templates/home.html',
         resolve: {
               requireNoAuth: function($state, Auth){
                   return Auth.$requireAuth().then(function(auth){
@@ -31,7 +31,7 @@ angular
         .state('profile', {
             url: '/profile',
             controller: 'ProfileCtrl as profileCtrl',
-            templateUrl: 'users/profile.html',
+            templateUrl: 'templates/profile.html',
             resolve: {
                 auth: function($state, Users, Auth){
                     return Auth.$requireAuth().catch(function(){
@@ -48,7 +48,7 @@ angular
         .state('channels', {
             url: '/channels',
             controller: 'ChannelsCtrl as channelsCtrl',
-            templateUrl: 'channels/index.html',
+            templateUrl: 'templates/channels_index.html',
             resolve: {
                 channels: function (Channels){
                     return Channels.$loaded();
@@ -71,12 +71,12 @@ angular
         //child state of the channels controller
         .state('channels.create', {
             url: '/create',
-            templateUrl: 'channels/create.html',
+            templateUrl: 'templates/create.html',
             controller: 'ChannelsCtrl as channelsCtrl'
         })
         .state('channels.messages', {
             url: '/{channelId}/messages',
-            templateUrl: 'channels/messages.html',
+            templateUrl: 'templates/messages.html',
             controller: 'MessagesCtrl as messagesCtrl',
             resolve: {
                 messages: function($stateParams, Messages){
@@ -89,7 +89,7 @@ angular
         })
         .state('channels.direct', {
             url: '/{uid}/messages/direct',
-            templateUrl: 'channels/messages.html',
+            templateUrl: 'templates/messages.html',
             controller: 'MessagesCtrl as messagesCtrl',
             resolve: {
                 messages: function($stateParams, Messages, profile){
@@ -105,7 +105,7 @@ angular
       .state('login', {
         url: '/login',
         controller: 'AuthCtrl as authCtrl',
-        templateUrl: 'auth/login.html',
+        templateUrl: 'templates/login.html',
         resolve: {
             requireNoAuth: function($state, Auth){
                 return Auth.$requireAuth().then(function(auth){
@@ -119,7 +119,7 @@ angular
       .state('register', {
         url: '/register',
         controller: 'AuthCtrl as authCtrl',
-        templateUrl: 'auth/register.html',
+        templateUrl: 'templates/register.html',
         resolve: {
               requireNoAuth: function($state, Auth){
                   return Auth.$requireAuth().then(function(auth){
