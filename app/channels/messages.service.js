@@ -1,4 +1,4 @@
-angular.module('angularfireSlackApp')
+angular.module('chitChatApp')
     .factory('Messages', function($firebaseArray, FirebaseUrl){
 
         var channelMessagesRef = new Firebase(FirebaseUrl+'channelMessages');

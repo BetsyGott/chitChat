@@ -2,14 +2,13 @@
 
 /**
  * @ngdoc overview
- * @name angularfireSlackApp
+ * @name chitChatApp
  * @description
- * # angularfireSlackApp
  *
- * Main module of the application.
+ * Main app module.
  */
 angular
-  .module('angularfireSlackApp', [
+  .module('chitChatApp', [
     'firebase',
     'angular-md5',
     'ui.router'

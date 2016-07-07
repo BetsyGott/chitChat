@@ -1,4 +1,4 @@
-angular.module('angularfireSlackApp')
+angular.module('chitChatApp')
     .factory('Users', function($firebaseArray, $firebaseObject, FirebaseUrl){
         var usersRef = new Firebase(FirebaseUrl+'users');
         var connectedRef = new Firebase(FirebaseUrl+'.info/connected');
@@ -9,6 +9,7 @@ angular.module('angularfireSlackApp')
                 return $firebaseObject(usersRef.child(uid));
             },
             getGravatar: function(uid){
+                console.log('//www.gravatar.com/avatar/' + users.$getRecord(uid).emailHash);
                 return '//www.gravatar.com/avatar/' + users.$getRecord(uid).emailHash;
             },
             getDisplayName: function(uid){

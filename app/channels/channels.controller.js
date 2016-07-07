@@ -1,4 +1,4 @@
-angular.module('angularfireSlackApp')
+angular.module('chitChatApp')
     .controller('ChannelsCtrl', function($state, Auth, Users, profile, channels){
         var channelsCtrl = this;
 
