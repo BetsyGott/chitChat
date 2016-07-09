@@ -248,3 +248,45 @@ body {
   font-weight: normal;
   font-size:10px;
 }
+
+@media (max-width: 600px) {
+  .message-pane {
+    width: 60%;
+  }
+  .sidebar {
+    display: inline-block;
+    width: 39.5%;
+    vertical-align: top;
+    height: 100%;
+    position: relative;
+    overflow-y: scroll;
+    padding-bottom: 100px;
+  }
+
+  .sidebar .my-info {
+    width: 40%;
+    padding: 4px;
+  }
+
+  .sidebar .my-info .user-info .user-name {
+    font-size: 14px;
+  }
+
+  .sidebar .my-info .user-info .options a {
+    font-size: 10px;
+  }
+
+  .sidebar .presence {
+    width: 8px;
+    height: 8px;
+  }
+
+  .sidebar .my-info .user-pic {
+    width: 25px;
+    height: 25px;
+  }
+
+  .message-pane .header h1 {
+    font-size: 18px;
+  }
+}
